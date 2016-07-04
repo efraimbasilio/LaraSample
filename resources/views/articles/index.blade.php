@@ -6,7 +6,12 @@
     @foreach($articles as $article)
 
         <article>
-            <h2>{{$article->title}}</h2>
+
+            <h2>
+                <a href="{{url('/articles',$article->id)}}">{{$article->title}}</a>
+            </h2>
+
+
             <div class="content">{{$article->body}}</div>
         </article>
 
